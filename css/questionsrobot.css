@@ -1,0 +1,490 @@
+
+
+
+html,body
+{
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    user-select: none;
+}
+@media only screen and (min-width:600px)  {
+.container{
+    background-size: cover;
+    background-image: url("../Images/Apocalypse Web Version Questionnaire.svg");
+    background-blend-mode: multiply;
+    position: absolute;
+    align-content: center;
+    height:100vh; 
+    width: 100vw;
+    /* filter: blur(3px); */
+    z-index: 0;
+
+} 
+.yolo
+{
+  /*border: 1px solid black;*/
+  height: 100px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.imgOverlay{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    opacity:0.4;
+    z-index: 0.5;
+}
+
+.question
+{
+    display: flex;
+    margin-top:12vh;
+    height:13vh;
+    width:90vw;
+    margin-left:5vw;
+    background-color:#878787;
+    border-radius: 15px;
+    line-height: 8vh;
+    vertical-align:middle;
+    font-family:Helvetica;
+    padding:1.5vw;
+    justify-content: center;
+z-index: 3;
+}
+
+.options
+{   display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:   #878787;
+    height: 10vh;
+    width: 25vw;;
+    border-radius: 15px;
+    vertical-align: middle;
+    line-height: 10vh;
+    margin-top: 4vh;
+    vertical-align: middle;
+    justify-content: center;
+z-index: 3;
+}
+#option1
+{
+    margin-left:15vw;
+    margin-top:10vh;
+}
+#option2
+{
+    margin-left: 60vw;
+    margin-top:-10vh;
+}
+#option3
+{
+    margin-left:15vw;
+    margin-top:15vh;
+}
+#option4
+{
+    margin-left:60vw;
+    margin-top:-10vh;
+}
+.lowbtn
+{
+    display: flex;
+    width: 15vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgba(62, 146, 255, 0.8);
+    border-radius: 15px;
+    justify-content: center;
+    z-index: 3;
+
+}
+.lowbtn p
+{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 4vh;
+}
+/* #prev
+{ 
+    margin-top:12vh;
+    margin-left:5vw;
+}
+#submit
+{
+    margin-top: -4vh;
+    margin-left:42.5vw;
+}
+#next
+{
+    margin-top: -16vh;
+    margin-left: 80vw;
+} */
+.options:hover{
+    background:  rgba(137,134,181,0.8);
+    transition: inherit;
+    transition-duration: 0.3s;
+
+    
+}
+.lowbtn:hover
+{
+    background: rgba(137,134,181,0.8);
+    transition: inherit;
+    transition-duration: 0.3s;
+
+}
+.selected { background:rgba(0, 119, 255, 0.5); }
+.selected:hover{
+    background: rgba(0, 119, 255, 0.5);
+}
+}
+
+
+@media only screen and (max-width : 600px) {
+.container{
+    background-image: url("../Images/Apocalypse Mobile Version Questionnaire.svg");
+    background-blend-mode: multiply;
+    align-content: center;
+    position:absolute;
+    height:100vh; 
+    width: 100vw;
+    /* filter: blur(4px); */
+}
+.imgOverlay{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    opacity:0.4;
+    z-index: 0.5;
+}
+
+.option{
+        height: 55vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        z-index: 100;
+
+    }
+.options{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #878787;
+    height: 10vh;
+    width: 92vw;
+    border-radius: 15px;
+    line-height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5vh 5vw;
+    z-index: 100;
+    }
+.option1a, .option2b{
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+.question{
+    margin-top: 9vh;
+    height: 20vh;
+    width: 92vw;
+    background-color:#878787;
+    border-radius: 15px;
+    line-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Helvetica;
+    font-size: 2.5vh;
+    margin-left: 4vw;
+    padding: 3.5vw;
+    z-index: 100;
+    }
+.lowbtn{
+    width: 25vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(62, 146, 255, 0.8);
+    border-radius: 15px;
+    margin-bottom: 2vh;
+    text-align: center;
+    line-height:10vh;
+}
+
+.yolo
+{
+  /*border: 1px solid black;*/
+  height: 100px;
+ /* margin-top: 2px;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+}
+.selected { background:rgba(0, 119, 255, 0.5); }
+
+
+
+/* 
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+   
+  }
+#sidebar {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:200px;
+    height:100vh;
+    
+    text-align:center;
+    transform-origin:left;
+    transform:perspective(1200px) rotateY(90deg);
+    transition:all 400ms ease;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  
+    
+  }
+  
+  #sidebar ul li  {
+  color:#ccc;
+    font-size:20px;
+    width:100%;
+    height:50px;
+    text-decoration: none;
+    line-height:50px;
+    list-style: none;
+  }
+  #sidebar ul li a {
+    color:#ccc;
+    font-size:20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', cursive;
+  }
+  #sidebar.active {
+    transform:perspective(1200px) rotateY(0deg);
+  }
+  
+  
+  
+  #toggle-btn {
+    position:absolute;
+    left:30px;
+    top:20px;
+    transition:left 200ms linear 0ms,transform 300ms ease 100ms;
+  }
+  #toggle-btn.active {
+    left:230px;
+    transform:rotate(360deg);
+  }
+  #toggle-btn span {
+    display: none;
+    transition:transform 300ms ease 200ms;
+  }
+  #toggle-btn.active span:nth-child(1) {
+    top:10px;
+    transform:rotate(45deg);
+  }
+  #toggle-btn.active span:nth-child(2) {
+    opacity:0;
+  }
+  #toggle-btn.active span:nth-child(3) {
+    top:-10px;
+    transform:rotate(-45deg);
+  }
+  .good
+  {
+      width: 100%;
+      height: 80px;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 4;
+      top:0%;
+  }
+  
+  .good a
+  {
+     position: relative;
+      top: 1px;
+      margin: 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      background-color: rgba(0,0,0,0.4);
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 18px;
+      padding-right: 18px;
+      border-radius: 50%;
+  
+  }
+  
+  .good .openBtn
+  {
+      position: relative
+      ;
+    background-color: rgba(0,0,0,0.4);
+      margin: 20px;
+      text-decoration: none;
+      font-size: 24px;
+      color: white;
+      
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-radius: 50%;
+  }
+  
+  .overlay
+  {       
+          font-family: sans-serif;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 0%;
+          background: rgba(0,0,0,0.9);
+          overflow: hidden;
+          z-index: 5;
+          transition: 0.5s all;
+  }
+  
+  .overlay__content
+  {
+      position: relative;
+      top: 5%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+  }
+  
+  .overlay a
+  {
+      color: #eee;
+      font-size: 30px;
+      text-decoration: none;
+      
+  }
+  
+  .overlay .closeBtn
+  {
+     position: absolute;
+     top: 20px;
+     right: 50px;
+     font-size: 50px;
+      
+  }
+  
+  .overlay .closeBtn:hover
+  {
+     color: white;
+     transition: 0.2s all ease-in;
+      
+  }
+  
+  .overlay__content a
+  {
+      color: #eee;
+      font-size: 50px;
+      text-decoration: none;
+    font-weight: bold;
+  font-family: 'Baloo Thambi', cursive;
+  
+  }
+  
+  .overlay__content p
+  {
+      color: #eee;
+      font-size: 30px;
+      text-decoration: none;
+      width: 80%;
+      margin: 20px auto;
+    font-family: 'ZCOOL KuaiLe', cursive;
+  
+  }
+  
+  @media screen and (max-width: 600px)
+  {
+  .overlay__content a
+  {
+      color: #eee;
+      font-size: 30px;
+      text-decoration: none;
+  }
+  
+  .overlay__content p
+  {
+      color: #eee;
+      font-size: 20px;
+      text-decoration: none;
+      width: 80%;
+      margin: 20px auto;
+  }
+  
+  .good
+  {
+      display: none;
+  }
+  
+  #toggle-btn span {
+    position:relative;
+    top:0px;
+    display:block;
+    background:rgb(255, 255, 255);
+    width:30px;
+    height:4px;
+    margin:5px 0px;
+    cursor:pointer;
+    border-radius: 40px;
+    transition:transform 300ms ease 200ms;
+  }
+  
+  #sidebar {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:200px;
+    height:100vh;
+    background-color: rgba(0,0,0,0.4);
+    text-align:center;
+    transform-origin:left;
+    transform:perspective(1200px) rotateY(90deg);
+    transition:all 400ms ease;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+  
+  }
+  
+  } */

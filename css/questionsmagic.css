@@ -1,0 +1,265 @@
+
+html,body
+{
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    user-select: none;
+}
+@media only screen and (min-width:600px)  {
+.container{
+    background-size: cover;
+    background-image: url("../Images/magical reality1.svg");
+    background-blend-mode: multiply;
+    position: absolute;
+    align-content: center;
+    height:100vh; 
+    width: 100vw;
+    /* filter: blur(1.5px); */
+    z-index: 0;
+    background-repeat: no-repeat;
+
+
+} 
+.yolo
+{
+  /*border: 1px solid black;*/
+  height: 100px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.imgOverlay{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    opacity:0.4;
+    z-index: 0.5;
+}
+.question
+{
+    display: flex;
+    margin-top:12vh;
+    height:13vh;
+    width:90vw;
+    margin-left:5vw;
+    background-color:#b8414a;
+    border-radius: 15px;
+    line-height: 8vh;
+    vertical-align:middle;
+    font-family:Helvetica;
+    padding:1.5vw;
+    justify-content: center;
+z-index: 3;
+}
+
+.options
+{   display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #df9665;
+    height: 10vh;
+    width: 25vw;;
+    border-radius: 15px;
+    vertical-align: middle;
+    line-height: 10vh;
+    margin-top: 4vh;
+    vertical-align: middle;
+    justify-content: center;
+z-index: 30;
+}
+#option1
+{
+    margin-left:15vw;
+    margin-top:10vh;
+}
+#option2
+{
+    margin-left: 60vw;
+    margin-top:-10vh;
+}
+#option3
+{
+    margin-left:15vw;
+    margin-top:15vh;
+}
+#option4
+{
+    margin-left:60vw;
+    margin-top:-10vh;
+}
+.lowbtn
+{
+    display: flex;
+    width: 15vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgba(212, 161, 95, 0.404);
+    border-radius: 15px;
+    justify-content: center;
+    z-index: 3;
+
+}
+.lowbtn p
+{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 4vh;
+}
+/* #prev
+{ 
+    margin-top:12vh;
+    margin-left:5vw;
+}
+#submit
+{
+    margin-top: -4vh;
+    margin-left:42.5vw;
+}
+#next
+{
+    margin-top: -16vh;
+    margin-left: 80vw; */
+}.options:hover{
+    background:   rgb(177, 155, 129);
+    transition: inherit;
+    transition-duration: 0.3s;
+
+    
+}
+.lowbtn:hover
+{
+    background: rgba(181, 159, 134, 0.8);
+    transition: inherit;
+    transition-duration: 0.3s;
+
+}
+.selected { background:#ff9830ce; }
+.selected:hover{
+    background: #ff9830ce;
+}
+
+
+
+@media only screen and (max-width : 600px) {
+.container{
+    background-image: url("../Images/magical reality1.svg");
+    background-blend-mode: multiply;
+    align-content: center;
+    position:absolute;
+    height:100vh; 
+    width: 100vw;
+    /* filter: blur(2px); */
+}
+.imgOverlay{
+    position: absolute;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    opacity:0.4;
+    z-index: 0.5;
+}
+
+.option{
+        height: 55vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        z-index: 100;
+
+    }
+.options{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:   #df9665;
+    height: 10vh;
+    width: 92vw;
+    border-radius: 15px;
+    line-height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5vh 5vw;
+    z-index: 100;
+    }
+.option1a, .option2b{
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+.question{
+    margin-top: 9vh;
+    height: 20vh;
+    width: 92vw;
+    background-color:#b8414a;
+    border-radius: 15px;
+    line-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Helvetica;
+    font-size: 2.5vh;
+    margin-left: 4vw;
+    padding: 3.5vw;
+    z-index: 100;
+    }
+.lowbtn{
+    width: 25vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(212, 161, 95, 0.404);
+    border-radius: 15px;
+    margin-bottom: 2vh;
+    text-align: center;
+    line-height:10vh;
+}
+.yolo
+{
+  /*border: 1px solid black;*/
+  height: 100px;
+ /* margin-top: 2px;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+/* #prev{
+    width: 22vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  rgba(137,134,181,0.8);
+    border-radius: 15px;
+    margin-left: 4vh;
+    margin-top:0vh;
+
+}
+#next {
+    width: 22vw;
+    height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(137,134,181,0.8);
+    border-radius: 15px;
+    margin-left: 40vh;
+    margin-bottom: 25 vh;
+    margin-top: -12vh;
+}
+#submit{
+    margin-top: -12vh;
+    margin-left: 21vh;
+} */
+}
+.selected { background:#ff9830ce; }
+
+
+

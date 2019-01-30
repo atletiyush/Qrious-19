@@ -1,31 +1,202 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Roulette</title>
-	<link rel="stylesheet" type="text/css" href="roulette.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+	body{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+	}
+	.wraper{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+		position: relative;
+	}
+	@keyframes spin1 {
+    	0% { transform: rotate(0deg); }
+    	50%{ transform: rotate(1800deg);}
+		70%{ transform: rotate(2160deg);}
+		100%{transform: rotate(2542.5deg);}
+    }
+    .second{
+    	animation: rotate 10s ease-out 1;
+    	animation-fill-mode: both; 
+    }
+    @keyframes rotate
+    {
+    	0% { transform: rotate(0deg); }
+    	100% { transform: rotate(1440deg); }
+    }
+	.button{
+		margin: 5vh;
+		height: 10vh;
+		width: 20vw;
+		background-color: black;
+		border-radius: 12px;
+		line-height: 10vh;
+		text-align: center;
+		font-size: 1.1vw;
+		color: white;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		z-index: 10;
+	}
+	.question1, .question2, .question3, .question4{
+		position: absolute;
+		transform: scale(0);
+		top: 0;
+		left: 0;
+		z-index: 200;
+		transition: transform 1s ease-in-out;
+	}
+    .but1 {
+    	border-radius: 10%;
+    }
+    .but2 {
+    	border-radius: 10%;
+    }
+	#roulette{
+		background: url("Images/roulette.svg");
+		background-size: cover;
+		transform-origin: 50% 50%;
+		width: 80vh;
+		height: 80vh;
+		transition:5s cubic-bezier(0,.4,.4,1.025);
+	}
+	#pointer{
+		background: url("Images/Pointer.svg");
+		width: 100px;
+		height: 140px;
+		background-size: cover;
+		position: relative;
+		top: -100%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 100;
+		
+	}
+	.container{
+		height: 80vh;
+		width: 80vh;
+	}
+	@media all and (max-width: 600px){
+		#roulette{
+			height: 80vw;
+			width: 80vw;
+		}
+		#pointer{
+			height: 60px;
+			width: 45px;
+		}
+		.container{
+			height: 80vw;
+			width: 80vw;
+		}
+		.button{
+			width: 80vw;
+			height: 20vw;
+			font-size: 4vw;
+		}
+	}
+	</style>
 
-	<script type="text/javascript">
-		function start() {
-		document.getElementById('img').classList.add('first');
-  		}
-  		function stop() {
-  			$("#img").stop();
-  		}
-	</script>
+
 </head>
 <body>
-	<button onclick="start()" class="but1">Start</button>
-	<button onclick="stop()" class="but2">Stop</button>
-	<img id="img" src="piechart_roulette.svg" width="200px" height="200px">
-</head>
-<body>
-	<div class="bg"></div>
-	<div class="overlay">
-	<img src="Images/roullete.svg" id="roulette">
-	<button class="but1" onclick="spin()">Start</button>
+	<div class="wraper">
+		<div class="container">
+			<div id="roulette"></div>
+			<div id="pointer"></div>
+		</div>
+		<div class="button" onclick="rand()">START</div>
+		<div class="question1">
+			<iframe src="mythologydes.html" style="width: 100vw; height: 100vh;"></iframe>
+		</div>
+		<div class="question2">
+			<iframe src="magicdes.html" style="width: 100vw; height: 100vh;"></iframe>
+		</div>
+		<div class="question3">
+			<iframe src="roboticdes.html" style="width: 100vw; height: 100vh;"></iframe>
+		</div>
+		<div class="question4">
+			<iframe src="gamingdes.html" style="width: 100vw; height: 100vh;"></iframe>
+		</div>
 	</div>
+	
+	<script type="text/javascript">
+			var question1 = document.getElementsByClassName('question1')[0];
+			var question2 = document.getElementsByClassName('question2')[0];
+			var question3 = document.getElementsByClassName('question3')[0];
+			var question4 = document.getElementsByClassName('question4')[0];
+			
+			// var top = document.getElementById('roulette').getBoundingClientRect().top;
+			// document.getElementById('pointer').style.top = top +"px";
+
+			function rand(){
+				var random = Math.floor(Math.random()*4);
+				var choice = Math.floor(Math.random()*2);
+				console.log(random);
+				
+				if(random == 0){
+					if(choice == 0){
+						document.getElementById('roulette').style.transform = "rotate(2497.5deg)";
+					}
+					else{
+						document.getElementById('roulette').style.transform = "rotate(2677.5deg)";
+					}
+					setTimeout(function(){
+						question1.style.transform = "scale(1)";
+					},5500);
+				}
+				else if(random == 1){
+					if(choice == 0){
+						document.getElementById('roulette').style.transform = "rotate(2632.5deg)";
+					}
+					else{
+						document.getElementById('roulette').style.transform = "rotate(2812.5deg)";
+					}
+					setTimeout(function(){
+						question2.style.transform = "scale(1)";
+					},5500)
+				}
+				else if(random == 2){
+					if(choice == 0){
+						document.getElementById('roulette').style.transform = "rotate(2587.5deg)";
+					}
+					else{
+						document.getElementById('roulette').style.transform = "rotate(2767.5deg)";
+					}
+					setTimeout(function(){
+						question3.style.transform = "scale(1)";
+					},5500)
+				}
+				else if(random == 3){
+					if(choice == 0){
+						document.getElementById('roulette').style.transform = "rotate(2542.5deg)";
+					}
+					else{
+						document.getElementById('roulette').style.transform = "rotate(2722.5deg)";
+					}
+					setTimeout(function(){
+						question4.style.transform = "scale(1)";
+					},5500)
+				}
+				console.log(random);
+			}
+			  function stop() {
+				  document.getElementById('roulette').classList.add('second');
+			  }
+		</script>
 </body>
-<script type="text/javascript" src="roulette.js"></script>]
 </html>
